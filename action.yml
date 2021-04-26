@@ -1,0 +1,7 @@
+name: 'Auto shipit'
+description: 'GitHub Action to run Auto release tool'
+author: 'Alexey Alekhin'
+# inputs:
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
