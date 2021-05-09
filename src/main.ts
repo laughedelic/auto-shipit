@@ -5,9 +5,8 @@ import parseArgs from 'auto/dist/parse-args'
 async function run(): Promise<void> {
   try {
     const argsInput = core.getInput('args')
-
     const [command, args] = parseArgs(argsInput.split(' '))
-    execute(command, args)
+    await execute(command, args)
   } catch (error) {
     core.setFailed(error.message)
   }
