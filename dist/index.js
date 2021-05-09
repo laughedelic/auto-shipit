@@ -47,7 +47,7 @@ function run() {
         try {
             const argsInput = core.getInput('args');
             const [command, args] = parse_args_1.default(argsInput.split(' '));
-            auto_1.execute(command, args);
+            yield auto_1.execute(command, args);
         }
         catch (error) {
             core.setFailed(error.message);
