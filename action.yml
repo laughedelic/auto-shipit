@@ -1,7 +1,11 @@
 name: 'Auto shipit'
 description: 'GitHub Action to run Auto release tool'
 author: 'Alexey Alekhin'
-# inputs:
+inputs:
+  args:
+    description: 'Arguments to pass to Auto'
+    required: false
+    dafault: 'shipit --dry-run'
 runs:
   using: 'node12'
   main: 'dist/index.js'

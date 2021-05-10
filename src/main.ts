@@ -1,16 +1,13 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+// import {execute} from 'auto'
+// import parseArgs from 'auto/dist/parse-args'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
-
-    core.setOutput('time', new Date().toTimeString())
+    // const argsInput = core.getInput('args')
+    // const [command, args] = parseArgs(argsInput.split(' '))
+    // await execute(command, args)
+    console.log('foo')
   } catch (error) {
     core.setFailed(error.message)
   }
